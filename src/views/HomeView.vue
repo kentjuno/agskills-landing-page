@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 
 const showPricing = ref(false)
+const activeSkill = ref(0)
+const copied = ref(false)
 
 const scrollToPricing = () => {
   document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })
@@ -10,6 +12,133 @@ const scrollToPricing = () => {
 const buyLicense = () => {
   window.open('https://fb.com/kentjuno', '_blank')
 }
+
+const copyCommand = (cmd) => {
+  navigator.clipboard.writeText(cmd)
+  copied.value = true
+  setTimeout(() => { copied.value = false }, 2000)
+}
+
+const skills = [
+  {
+    id: 'copywriting',
+    emoji: '✍️',
+    label: 'Copywriting',
+    command: 'akm:copywriting',
+    hint: '[type] [context]',
+    title: 'Conversion Copywriting Engine',
+    description: 'Áp dụng 6 công thức copy thực chiến (AIDA, PAS, BAB, 4Ps, 4Us, FAB) để viết nội dung chuyển đổi cao cho landing page, email, quảng cáo. Tự động trích xuất phong cách viết từ file của bạn.',
+    useCases: [
+      'Viết headline/subject line thu hút',
+      'Landing page copy theo công thức AIDA',
+      'Email campaign sequence',
+      'CTA optimization A/B variants',
+      'Áp dụng brand voice từ tài liệu nội bộ',
+    ],
+    rightTitle: 'Công thức Copy',
+    rightItems: [
+      { label: 'AIDA', desc: 'Attention → Interest → Desire → Action', tag: 'Landing Page' },
+      { label: 'PAS', desc: 'Problem → Agitate → Solution', tag: 'Email / Sales' },
+      { label: 'BAB', desc: 'Before → After → Bridge', tag: 'Testimonial' },
+      { label: '4Us', desc: 'Urgent + Unique + Useful + Ultra-specific', tag: 'Headline' },
+      { label: 'FAB', desc: 'Feature → Advantage → Benefit', tag: 'Product' },
+    ],
+  },
+  {
+    id: 'seo',
+    emoji: '🔍',
+    label: 'SEO',
+    command: 'akm:seo',
+    hint: '[audit|keywords|pseo] [target]',
+    title: 'SEO Intelligence Suite',
+    description: 'Nghiên cứu từ khóa với data thật (volume, CPC, độ khó) qua ReviewWeb.site API. Kết nối Google Search Console để phân tích traffic, CTR, vị trí. Tạo schema JSON-LD và kiểm tra Core Web Vitals.',
+    useCases: [
+      'Keyword research với data volume thật',
+      'Phân tích đối thủ (traffic, top keywords)',
+      'Audit SEO kỹ thuật toàn diện',
+      'Tạo JSON-LD schema cho rich snippet',
+      'Programmatic SEO template generation',
+    ],
+    rightTitle: 'Scripts Tích Hợp',
+    rightItems: [
+      { label: 'gsc-query.cjs', desc: 'Google Search Console API', tag: 'OAuth2' },
+      { label: 'analyze-keywords.cjs', desc: 'Keyword research (ReviewWeb API)', tag: 'Data thật' },
+      { label: 'audit-core-web-vitals.cjs', desc: 'CWV measurement', tag: 'LCP/CLS/FID' },
+      { label: 'generate-schema.cjs', desc: 'JSON-LD Schema generator', tag: 'Rich Snippet' },
+      { label: 'pseo-generator.cjs', desc: 'Programmatic SEO pages', tag: 'Scale' },
+    ],
+  },
+  {
+    id: 'ads',
+    emoji: '📣',
+    label: 'Ads Management',
+    command: 'akm:ads-management',
+    hint: '[platform] [campaign-type]',
+    title: 'Multi-Platform Ads Engine',
+    description: 'Quản lý quảng cáo trả phí trên Google, Meta, LinkedIn, TikTok qua API trực tiếp. Viết copy quảng cáo, tối ưu ngân sách, theo dõi ROAS. Tạo ảnh/video quảng cáo bằng AI (Gemini + Veo 3.1).',
+    useCases: [
+      'Tạo và tối ưu chiến dịch quảng cáo',
+      'Viết copy ads theo platform (Google, Meta, TikTok)',
+      'Generate hình ảnh ads bằng AI (Gemini Pro)',
+      'Tạo video quảng cáo 15s với Veo 3.1',
+      'A/B testing strategy và ROAS tracking',
+    ],
+    rightTitle: 'Platform API Scripts',
+    rightItems: [
+      { label: 'google-ads-manager.py', desc: 'Tạo campaign, pause, report', tag: 'Google Ads' },
+      { label: 'meta-ads-manager.py', desc: 'Create ad, adset, campaign', tag: 'Meta / FB' },
+      { label: 'Gemini Pro Image', desc: 'Gen ảnh ads chất lượng 4K', tag: 'AI Image' },
+      { label: 'Veo 3.1 Video', desc: 'Gen video ads 15s', tag: 'AI Video' },
+    ],
+  },
+  {
+    id: 'social',
+    emoji: '📲',
+    label: 'Social Media',
+    command: 'akm:social',
+    hint: '[platform] [type]',
+    title: 'Social Media Content Factory',
+    description: 'Tạo nội dung tối ưu cho 7 nền tảng: X/Twitter, Facebook, Instagram, LinkedIn, TikTok, YouTube, Threads. Tự động viết hook, hashtag research, và lên lịch đăng bài qua API.',
+    useCases: [
+      'Viết post theo format chuẩn từng platform',
+      'Thread, carousel, reel script creation',
+      'Hook writing viral cho TikTok/Reels',
+      'Content calendar planning',
+      'Lên lịch tự động qua API',
+    ],
+    rightTitle: 'Nền Tảng Hỗ Trợ',
+    rightItems: [
+      { label: 'X / Twitter', desc: 'Thread, post, hook writing', tag: 'API ✓' },
+      { label: 'Facebook & Instagram', desc: 'Feed, Stories, Reels', tag: 'API ✓' },
+      { label: 'LinkedIn', desc: 'B2B content, thought leadership', tag: 'API ✓' },
+      { label: 'TikTok', desc: 'Script, hook, hashtag research', tag: 'API ✓' },
+      { label: 'YouTube', desc: 'Script, description, tags', tag: 'API ✓' },
+    ],
+  },
+  {
+    id: 'content',
+    emoji: '📐',
+    label: 'Content Strategy',
+    command: 'akm:content-marketing',
+    hint: '[content-type] [topic]',
+    title: 'Content Strategy Framework',
+    description: 'Xây dựng chiến lược nội dung dài hạn với Content Pillar mapping, editorial calendar, và content audit workflow. Tự động repurpose 1 bài blog thành social post, email sequence, video script.',
+    useCases: [
+      'Xây dựng Content Pillar (3-5 trụ cột)',
+      'Editorial calendar 3/6 tháng',
+      'Blog post planning theo keyword intent',
+      'Content audit (Keep / Update / Delete)',
+      'Repurpose 1 nội dung → nhiều định dạng',
+    ],
+    rightTitle: 'Content Workflow',
+    rightItems: [
+      { label: 'Content Strategy', desc: 'Audit → Pillar → Calendar', tag: '7 bước' },
+      { label: 'Blog Planning', desc: 'Keyword → Brief → Draft → Publish', tag: 'SEO-first' },
+      { label: 'Repurpose Engine', desc: 'Blog → Social + Email + Video', tag: 'x3 Output' },
+      { label: 'Content Audit', desc: 'Keep, Update, Consolidate, Delete', tag: 'Quarterly' },
+    ],
+  },
+]
 </script>
 
 <template>
@@ -134,7 +263,108 @@ const buyLicense = () => {
       </div>
     </section>
 
+    <!-- Skills Showcase Section -->
+    <section id="skills" class="relative z-10 py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium uppercase tracking-wider mb-5">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Skill Preview
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">130+ Skills Thực Chiến</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">Mỗi skill là một chuyên gia độc lập. Gõ 1 lệnh, AI tự biết phải làm gì — từ nghiên cứu từ khóa đến viết quảng cáo hoàn chỉnh.</p>
+        </div>
+
+        <!-- Skill Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+          <button
+            v-for="(skill, idx) in skills"
+            :key="skill.id"
+            @click="activeSkill = idx"
+            class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border"
+            :class="activeSkill === idx
+              ? 'bg-primary text-white border-primary shadow-[0_0_15px_rgba(157,78,221,0.4)]'
+              : 'border-white/10 text-gray-400 hover:text-white hover:border-primary/40 bg-surface-elevated/50'"
+          >
+            {{ skill.emoji }} {{ skill.label }}
+          </button>
+        </div>
+
+        <!-- Skill Card -->
+        <transition name="skill-fade" mode="out-in">
+          <div :key="activeSkill" class="glass-panel rounded-2xl overflow-hidden border-white/10 shadow-2xl shadow-primary/10">
+            <!-- Card Header -->
+            <div class="border-b border-white/5 px-8 py-5 flex items-center justify-between bg-surface-elevated/40">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl bg-primary/10 border border-primary/20">
+                  {{ skills[activeSkill].emoji }}
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-primary/15 text-primary border border-primary/20">{{ skills[activeSkill].command }}</span>
+                    <span class="text-xs text-gray-500 font-mono">{{ skills[activeSkill].hint }}</span>
+                  </div>
+                  <p class="text-white font-semibold mt-1">{{ skills[activeSkill].title }}</p>
+                </div>
+              </div>
+              <button
+                @click="copyCommand(skills[activeSkill].command)"
+                class="text-xs px-3 py-1.5 rounded-lg border transition-all duration-200 font-medium"
+                :class="copied ? 'border-green-500/40 text-green-400 bg-green-500/10' : 'border-white/10 text-gray-400 hover:border-primary/40 hover:text-white'"
+              >
+                {{ copied ? '✓ Copied!' : 'Copy lệnh' }}
+              </button>
+            </div>
+
+            <!-- Card Body -->
+            <div class="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/5">
+              <!-- Left: Desc + Use Cases -->
+              <div class="p-8">
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">{{ skills[activeSkill].description }}</p>
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Khi nào dùng</h4>
+                <ul class="space-y-2">
+                  <li
+                    v-for="useCase in skills[activeSkill].useCases"
+                    :key="useCase"
+                    class="flex items-start gap-2.5 text-sm text-gray-400"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    {{ useCase }}
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Right: Output + Formulas -->
+              <div class="p-8 bg-surface/40">
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">{{ skills[activeSkill].rightTitle }}</h4>
+                <div class="space-y-2.5">
+                  <div
+                    v-for="item in skills[activeSkill].rightItems"
+                    :key="item.label"
+                    class="flex items-center justify-between p-3 rounded-lg bg-surface-elevated/60 border border-white/5 group hover:border-primary/20 transition-colors"
+                  >
+                    <div>
+                      <span class="text-sm text-white font-medium">{{ item.label }}</span>
+                      <p v-if="item.desc" class="text-xs text-gray-500 mt-0.5">{{ item.desc }}</p>
+                    </div>
+                    <span v-if="item.tag" class="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-mono">{{ item.tag }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+
+        <!-- Browse all hint -->
+        <p class="text-center text-sm text-gray-500 mt-8">
+          🔥 Đây chỉ là <span class="text-primary font-medium">5/130+</span> skills. Mua license để mở khoá toàn bộ.
+        </p>
+      </div>
+    </section>
+
     <!-- How it Works -->
+
     <section id="how-it-works" class="relative z-10 py-24">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
