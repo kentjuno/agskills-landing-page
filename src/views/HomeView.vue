@@ -228,18 +228,5 @@ const buyLicense = () => {
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="relative z-10 py-10 border-t border-white/5 text-center px-6">
-      <div class="flex items-center justify-center gap-2 mb-4">
-        <div class="w-6 h-6 rounded bg-gradient-to-br from-primary to-purple-900 flex items-center justify-center">
-          <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <span class="font-bold text-gray-300">KJ STUDIO</span>
-      </div>
-      <p class="text-gray-500 text-sm">© 2026 KJ Studio. All rights reserved.</p>
-    </footer>
-
   </div>
 </template>
