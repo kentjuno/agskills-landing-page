@@ -183,7 +183,7 @@ const buyLicense = () => {
     <section id="pricing" class="relative z-10 py-24 bg-surface border-y border-white/5">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Lấy Đức Phục Nhân</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Trọn Đời License</h2>
           <p class="text-gray-400 max-w-xl mx-auto">Mua 1 lần, dùng trọn đời. Nâng cấp miễn phí. Trở thành học trò chân truyền với đầy đủ binh khí.</p>
         </div>
         
