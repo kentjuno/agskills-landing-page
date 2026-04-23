@@ -1,0 +1,377 @@
+{
+  "nav": {
+    "features": "Tính Năng",
+    "howItWorks": "Cách Hoạt Động",
+    "buyLicense": "Mua License"
+  },
+  "hero": {
+    "badge": "Antigravity Marketing Dashboard",
+    "titleLine1": "Làm Chủ AI Marketing.",
+    "titleLine2": "Lắp Ráp Dễ Như Lego.",
+    "subtitle": "Biến máy tính của bạn thành bộ não sáng tạo với 130+ kỹ năng AI chạy Local. Tự động hóa nội dung, SEO, quảng cáo mà không lo lộ dữ liệu.",
+    "ctaPrimary": "Nhận License Ngay",
+    "ctaSecondary": "Tìm hiểu thêm"
+  },
+  "features": {
+    "title": "Mọi Thứ Bạn Cần Ở Một Nơi",
+    "subtitle": "Không còn phải copy-paste phức tạp. Hệ thống tự động lưu trữ và quản lý tài sản số của bạn một cách thông minh.",
+    "items": [
+      {
+        "title": "130+ AI Marketing Skills",
+        "desc": "Bộ sưu tập câu lệnh prompt chuyên sâu từ Copywriting, SEO, Analytics đến Ads Management. Chép 1 click là dùng ngay."
+      },
+      {
+        "title": "UI Command Center",
+        "desc": "Giao diện trực quan giúp bạn quản lý Brand Voice, Fonts, Logos và toàn bộ File (Assets) do AI tạo ra trên máy của bạn."
+      },
+      {
+        "title": "Bảo Mật Local 100%",
+        "desc": "Dữ liệu công ty bạn không bao giờ rời khỏi máy tính. Antigravity chạy hoàn toàn Local, an toàn tuyệt đối cho doanh nghiệp."
+      }
+    ]
+  },
+  "skills": {
+    "badge": "Skill Preview",
+    "title": "130+ Skills Thực Chiến",
+    "subtitle": "Mỗi skill là một chuyên gia độc lập. Gõ 1 lệnh, AI tự biết phải làm gì — từ nghiên cứu từ khóa đến viết quảng cáo hoàn chỉnh.",
+    "copyCmd": "Copy lệnh",
+    "copied": "✓ Copied!",
+    "whenToUse": "Khi nào dùng",
+    "moreHint": "🔥 Đây chỉ là <span class=\"text-primary font-medium\">5/130+</span> skills. Mua license để mở khoá toàn bộ."
+  },
+  "howItWorks": {
+    "title": "Triển Khai Trong 3 Bước",
+    "steps": [
+      {
+        "title": "Cài Đặt Lõi Hệ Thống",
+        "desc": "Mở Terminal và tải lõi KJ Studio CLI bằng lệnh NPM."
+      },
+      {
+        "title": "Nhập Mã Quyền (License)",
+        "desc": "Sau khi cài đặt, điền GitHub Personal Access Token của bạn để xác thực quyền lợi truy cập mã nguồn gốc.",
+        "label": "Token:"
+      },
+      {
+        "title": "Mở Dashboard & Tận Hưởng",
+        "desc": "Chỉ cần gõ 1 câu lệnh, toàn bộ trung tâm chỉ huy sẽ mở ra trên trình duyệt của bạn."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Trọn Đời License",
+    "subtitle": "Thanh toán 1 lần, sở hữu source code trọn đời. Toàn quyền sử dụng cho mọi dự án của bạn.",
+    "cardTitle": "Marketing License",
+    "price": "$49",
+    "period": "/ vĩnh viễn",
+    "features": [
+      "Thanh toán 1 lần, cấp quyền repo tải code trong 7 ngày.",
+      "Sở hữu code vĩnh viễn. Dùng không giới hạn dự án (Personal & Commercial).",
+      "Toàn bộ 130+ Marketing Skills và giao diện Dashboard xịn xò.",
+      "Gia hạn tải bản mới (Update) sau 7 ngày: chỉ <strong>$10</strong>/lần."
+    ],
+    "optional": "Tuỳ chọn: Dịch vụ cài đặt tận giường (Setup từ A-Z qua UltraViewer) thêm <strong>$10</strong> phí nhân sự.",
+    "cta": "Nhắn Tin Mua Ngay",
+    "hint1": "Sẽ mở khung chat Facebook fb.com/kentjuno",
+    "hint2Prefix": "⚠️ Tất cả giao dịch là không hoàn tiền (Non-refundable). Vui lòng đọc",
+    "hint2Link": "Điều khoản dịch vụ",
+    "hint2Suffix": "trước khi mua."
+  },
+  "terms": {
+    "title": "Điều Khoản Dịch Vụ (Terms of Service)",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 4 năm 2026",
+    "sections": [
+      {
+        "title": "1. Chấp nhận điều khoản",
+        "content": [
+          "Bằng việc mua và sử dụng KJ Studio Marketing Dashboard (\"Phần mềm\"), bạn đồng ý tuân thủ các điều khoản và điều kiện được quy định trong tài liệu này. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng không sử dụng Phần mềm."
+        ]
+      },
+      {
+        "title": "2. Cấp phép sử dụng (License)",
+        "list": [
+          "Bạn được cấp một quyền sử dụng không độc quyền, không thể chuyển nhượng (Non-transferable) để cài đặt và sử dụng Phần mềm trên các thiết bị thuộc sở hữu cá nhân của bạn.",
+          "Quyền truy cập repository Github (thông qua PAT) có hiệu lực 7 ngày kể từ thời điểm thanh toán. Bạn được phép tải mã nguồn về và sử dụng vĩnh viễn không giới hạn dự án (thương mại và cá nhân).",
+          "Bạn <strong>không</strong> được phép chia sẻ Github Personal Access Token (PAT) của mình cho bên thứ 3. Bạn cũng <strong>không</strong> được phép phân phối lại (resell/redistribute) bộ mã nguồn gốc của chúng tôi dưới dạng sản phẩm cạnh tranh."
+        ]
+      },
+      {
+        "title": "3. Sở hữu trí tuệ",
+        "content": [
+          "Toàn bộ mã nguồn, giao diện người dùng, thương hiệu, và tài liệu (bao gồm cả các Prompt AI mẫu) thuộc bản quyền của KJ Studio. Việc bán lại, phân phối lại, hoặc sao chép mã nguồn để tạo ra các sản phẩm phái sinh thương mại là nghiêm cấm."
+        ]
+      },
+      {
+        "title": "4. Từ chối bảo đảm (Disclaimer of Warranty)",
+        "content": [
+          "Phần mềm được cung cấp \"Nguyên trạng\" (As is). Mặc dù chúng tôi đã nỗ lực tối đa để đảm bảo Phần mềm hoạt động ổn định, KJ Studio không bảo đảm rằng Phần mềm sẽ không có lỗi hoặc sẽ hoạt động tương thích với mọi môi trường hệ điều hành/phần cứng đặc thù của người dùng."
+        ]
+      },
+      {
+        "title": "5. Giới hạn trách nhiệm",
+        "content": [
+          "Trong mọi trường hợp, KJ Studio sẽ không chịu trách nhiệm cho bất kỳ thiệt hại trực tiếp, gián tiếp, hay ngẫu nhiên nào (bao gồm nhưng không giới hạn ở việc mất dữ liệu, mất doanh thu) phát sinh từ việc sử dụng hoặc không thể sử dụng Phần mềm."
+        ]
+      },
+      {
+        "title": "6. Cập nhật & Hỗ trợ",
+        "content": [
+          "Bạn được cấp quyền tải mã nguồn trong vòng 7 ngày kể từ lúc thanh toán. Nếu muốn nhận các bản cập nhật tính năng (Updates) mới sau 7 ngày, bạn có thể mua Gói Gia Hạn Cập Nhật với mức giá $10/lần. Hỗ trợ kỹ thuật sẽ được cung cấp qua kênh Facebook cá nhân hoặc cộng đồng Discord. Phí cài đặt từ xa ($10) chỉ áp dụng cho lần thiết lập đầu tiên (nếu có yêu cầu)."
+        ]
+      },
+      {
+        "title": "7. Chính sách hoàn tiền (Refund Policy)",
+        "alertTitle": "⚠️ Tất cả giao dịch là KHÔNG HOÀN TIỀN (Non-refundable)",
+        "alertDesc": "Bằng việc hoàn tất thanh toán, bạn xác nhận đã hiểu và đồng ý với chính sách này.",
+        "list": [
+          "Do tính chất của phần mềm kỹ thuật số — sau khi license được cấp và bạn có thể truy cập vào mã nguồn/tài nguyên — <strong>chúng tôi không hỗ trợ hoàn tiền dưới bất kỳ hình thức nào.</strong>",
+          "Điều này áp dụng cho tất cả các trường hợp, bao gồm nhưng không giới hạn ở: thay đổi ý định, không tương thích hệ thống, hoặc không sử dụng đến.",
+          "Trước khi mua, vui lòng liên hệ <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a> nếu bạn có bất kỳ câu hỏi nào về tính năng hoặc khả năng tương thích.",
+          "Phí cài đặt từ xa ($10) cũng không hoàn tiền sau khi phiên hỗ trợ đã được thực hiện."
+        ]
+      },
+      {
+        "title": "Liên hệ",
+        "content": [
+          "Nếu bạn có bất kỳ câu hỏi nào về Điều khoản này, vui lòng liên hệ trực tiếp với chúng tôi qua Facebook: <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a>."
+        ]
+      }
+    ]
+  },
+  "skillsData": {
+    "copywriting": {
+      "label": "Copywriting",
+      "title": "Conversion Copywriting Engine",
+      "description": "Áp dụng 6 công thức copy thực chiến (AIDA, PAS, BAB, 4Ps, 4Us, FAB) để viết nội dung chuyển đổi cao cho landing page, email, quảng cáo. Tự động trích xuất phong cách viết từ file của bạn.",
+      "useCases": [
+        "Viết headline/subject line thu hút",
+        "Landing page copy theo công thức AIDA",
+        "Email campaign sequence",
+        "CTA optimization A/B variants",
+        "Áp dụng brand voice từ tài liệu nội bộ"
+      ],
+      "rightTitle": "Công thức Copy",
+      "rightItems": [
+        {
+          "label": "AIDA",
+          "desc": "Attention → Interest → Desire → Action",
+          "tag": "Landing Page"
+        },
+        {
+          "label": "PAS",
+          "desc": "Problem → Agitate → Solution",
+          "tag": "Email / Sales"
+        },
+        {
+          "label": "BAB",
+          "desc": "Before → After → Bridge",
+          "tag": "Testimonial"
+        },
+        {
+          "label": "4Us",
+          "desc": "Urgent + Unique + Useful + Ultra-specific",
+          "tag": "Headline"
+        },
+        {
+          "label": "FAB",
+          "desc": "Feature → Advantage → Benefit",
+          "tag": "Product"
+        }
+      ]
+    },
+    "seo": {
+      "label": "SEO",
+      "title": "SEO Intelligence Suite",
+      "description": "Nghiên cứu từ khóa với data thật (volume, CPC, độ khó) qua ReviewWeb.site API. Kết nối Google Search Console để phân tích traffic, CTR, vị trí. Tạo schema JSON-LD và kiểm tra Core Web Vitals.",
+      "useCases": [
+        "Keyword research với data volume thật",
+        "Phân tích đối thủ (traffic, top keywords)",
+        "Audit SEO kỹ thuật toàn diện",
+        "Tạo JSON-LD schema cho rich snippet",
+        "Programmatic SEO template generation"
+      ],
+      "rightTitle": "Scripts Tích Hợp",
+      "rightItems": [
+        {
+          "label": "gsc-query.cjs",
+          "desc": "Google Search Console API",
+          "tag": "OAuth2"
+        },
+        {
+          "label": "analyze-keywords.cjs",
+          "desc": "Keyword research (ReviewWeb API)",
+          "tag": "Data thật"
+        },
+        {
+          "label": "audit-core-web-vitals.cjs",
+          "desc": "CWV measurement",
+          "tag": "LCP/CLS/FID"
+        },
+        {
+          "label": "generate-schema.cjs",
+          "desc": "JSON-LD Schema generator",
+          "tag": "Rich Snippet"
+        },
+        {
+          "label": "pseo-generator.cjs",
+          "desc": "Programmatic SEO pages",
+          "tag": "Scale"
+        }
+      ]
+    },
+    "ads": {
+      "label": "Ads Management",
+      "title": "Multi-Platform Ads Engine",
+      "description": "Quản lý quảng cáo trả phí trên Google, Meta, LinkedIn, TikTok qua API trực tiếp. Viết copy quảng cáo, tối ưu ngân sách, theo dõi ROAS. Tạo ảnh/video quảng cáo bằng AI (Gemini + Veo 3.1).",
+      "useCases": [
+        "Tạo và tối ưu chiến dịch quảng cáo",
+        "Viết copy ads theo platform (Google, Meta, TikTok)",
+        "Generate hình ảnh ads bằng AI (Gemini Pro)",
+        "Tạo video quảng cáo 15s với Veo 3.1",
+        "A/B testing strategy và ROAS tracking"
+      ],
+      "rightTitle": "Platform API Scripts",
+      "rightItems": [
+        {
+          "label": "google-ads-manager.py",
+          "desc": "Tạo campaign, pause, report",
+          "tag": "Google Ads"
+        },
+        {
+          "label": "meta-ads-manager.py",
+          "desc": "Create ad, adset, campaign",
+          "tag": "Meta / FB"
+        },
+        {
+          "label": "Gemini Pro Image",
+          "desc": "Gen ảnh ads chất lượng 4K",
+          "tag": "AI Image"
+        },
+        {
+          "label": "Veo 3.1 Video",
+          "desc": "Gen video ads 15s",
+          "tag": "AI Video"
+        }
+      ]
+    },
+    "social": {
+      "label": "Social Media",
+      "title": "Social Media Content Factory",
+      "description": "Tạo nội dung tối ưu cho 7 nền tảng: X/Twitter, Facebook, Instagram, LinkedIn, TikTok, YouTube, Threads. Tự động viết hook, hashtag research, và lên lịch đăng bài qua API.",
+      "useCases": [
+        "Viết post theo format chuẩn từng platform",
+        "Thread, carousel, reel script creation",
+        "Hook writing viral cho TikTok/Reels",
+        "Content calendar planning",
+        "Lên lịch tự động qua API"
+      ],
+      "rightTitle": "Nền Tảng Hỗ Trợ",
+      "rightItems": [
+        {
+          "label": "X / Twitter",
+          "desc": "Thread, post, hook writing",
+          "tag": "API ✓"
+        },
+        {
+          "label": "Facebook & Instagram",
+          "desc": "Feed, Stories, Reels",
+          "tag": "API ✓"
+        },
+        {
+          "label": "LinkedIn",
+          "desc": "B2B content, thought leadership",
+          "tag": "API ✓"
+        },
+        {
+          "label": "TikTok",
+          "desc": "Script, hook, hashtag research",
+          "tag": "API ✓"
+        },
+        {
+          "label": "YouTube",
+          "desc": "Script, description, tags",
+          "tag": "API ✓"
+        }
+      ]
+    },
+    "content": {
+      "label": "Content Strategy",
+      "title": "Content Strategy Framework",
+      "description": "Xây dựng chiến lược nội dung dài hạn với Content Pillar mapping, editorial calendar, và content audit workflow. Tự động repurpose 1 bài blog thành social post, email sequence, video script.",
+      "useCases": [
+        "Xây dựng Content Pillar (3-5 trụ cột)",
+        "Editorial calendar 3/6 tháng",
+        "Blog post planning theo keyword intent",
+        "Content audit (Keep / Update / Delete)",
+        "Repurpose 1 nội dung → nhiều định dạng"
+      ],
+      "rightTitle": "Content Workflow",
+      "rightItems": [
+        {
+          "label": "Content Strategy",
+          "desc": "Audit → Pillar → Calendar",
+          "tag": "7 bước"
+        },
+        {
+          "label": "Blog Planning",
+          "desc": "Keyword → Brief → Draft → Publish",
+          "tag": "SEO-first"
+        },
+        {
+          "label": "Repurpose Engine",
+          "desc": "Blog → Social + Email + Video",
+          "tag": "x3 Output"
+        },
+        {
+          "label": "Content Audit",
+          "desc": "Keep, Update, Consolidate, Delete",
+          "tag": "Quarterly"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật",
+    "rights": "© 2026 KJ Studio. All rights reserved."
+  },
+  "privacy": {
+    "title": "Chính Sách Bảo Mật (Privacy Policy)",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 4 năm 2026",
+    "coreCommitment": {
+      "title": "Cam kết cốt lõi: 100% Local, Không thu thập dữ liệu",
+      "desc": "KJ Studio Marketing Dashboard được thiết kế theo kiến trúc Local-first (Chạy hoàn toàn trên máy cá nhân). <strong>Chúng tôi không có máy chủ trung tâm để theo dõi, lưu trữ hay đọc lén nội dung, chiến dịch marketing hoặc dữ liệu khách hàng của bạn.</strong> Dữ liệu của bạn thuộc về bạn và chỉ nằm trên ổ cứng của bạn."
+    },
+    "sections": [
+      {
+        "title": "1. Thông tin chúng tôi thu thập",
+        "desc": "Vì tính chất phần mềm chạy Local, chúng tôi thu thập cực kỳ ít thông tin:",
+        "list": [
+          "<strong>Thông tin mua hàng:</strong> Tên, Email, số điện thoại (nếu có) khi bạn thực hiện giao dịch thanh toán để mua License.",
+          "<strong>Thông tin xác thực:</strong> Hệ thống có gọi về GitHub API để xác thực quyền truy cập của GitHub PAT (để đảm bảo bạn là người đã mua hàng). Quá trình này diễn ra giữa máy tính của bạn và máy chủ của GitHub."
+        ]
+      },
+      {
+        "title": "2. Chúng tôi không thu thập những gì?",
+        "desc": "Chúng tôi tuyệt đối <strong>KHÔNG</strong> thu thập, truyền tải, hay lưu trữ các thông tin sau:",
+        "list": [
+          "Nội dung bài viết, hình ảnh, tài sản số (Assets) mà bạn tạo ra trong thư mục <code>.antigravity</code>.",
+          "Các câu lệnh (Prompts) mà bạn nhập vào.",
+          "Lịch sử truy cập hay tương tác của bạn bên trong Marketing Dashboard.",
+          "Mã nguồn hay dữ liệu từ các tệp tin cá nhân khác trên máy tính của bạn."
+        ]
+      },
+      {
+        "title": "3. Cookie và Tracking",
+        "desc": "Trang web Landing Page này có thể sử dụng các cookie cơ bản (chẳng hạn như Cloudflare Web Analytics) để đếm số lượng người truy cập. Các công cụ này chỉ thu thập dữ liệu tổng hợp, ẩn danh và không dùng để định danh cá nhân bạn."
+      },
+      {
+        "title": "4. Chia sẻ thông tin",
+        "desc": "Chúng tôi cam kết không bán, cho thuê hoặc trao đổi thông tin mua hàng (Email, Tên) của bạn với bất kỳ bên thứ ba nào vì mục đích tiếp thị."
+      },
+      {
+        "title": "Liên hệ",
+        "desc": "Nếu bạn có bất kỳ câu hỏi nào về các chính sách về bảo mật dữ liệu, hãy nhắn tin trực tiếp cho chúng tôi qua Facebook: <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a>."
+      }
+    ]
+  }
+}

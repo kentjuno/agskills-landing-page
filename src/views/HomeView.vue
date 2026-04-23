@@ -1,5 +1,13 @@
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale, tm, rt } = useI18n()
+
+const switchLanguage = () => {
+  locale.value = locale.value === 'vi' ? 'en' : 'vi'
+  localStorage.setItem('language', locale.value)
+}
 
 const showPricing = ref(false)
 const activeSkill = ref(0)
@@ -161,10 +169,13 @@ const skills = [
           <span class="text-xl font-bold tracking-wider text-white">KJ STUDIO</span>
         </div>
         <div class="flex items-center gap-6 text-sm font-medium">
-          <a href="#features" class="hidden md:block hover:text-primary transition-colors">Tính Năng</a>
-          <a href="#how-it-works" class="hidden md:block hover:text-primary transition-colors">Cách Hoạt Động</a>
+          <a href="#features" class="hidden md:block hover:text-primary transition-colors">{{ t('nav.features') }}</a>
+          <a href="#how-it-works" class="hidden md:block hover:text-primary transition-colors">{{ t('nav.howItWorks') }}</a>
+          <button @click="switchLanguage" class="px-2 py-1 rounded border border-white/20 hover:bg-white/10 transition-colors">
+            {{ locale === 'vi' ? '🇺🇸 EN' : '🇻🇳 VI' }}
+          </button>
           <button @click="scrollToPricing" class="px-5 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-all hover:shadow-[0_0_20px_rgba(157,78,221,0.3)]">
-            Mua License
+            {{ t('nav.buyLicense') }}
           </button>
         </div>
       </div>
@@ -175,27 +186,27 @@ const skills = [
       <div class="max-w-6xl mx-auto text-center space-y-8">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium uppercase tracking-wider mb-4 shadow-[0_0_15px_rgba(157,78,221,0.2)]">
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          Antigravity Marketing Dashboard
+          {{ t('hero.badge') }}
         </div>
         
         <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight">
-          Làm Chủ AI Marketing.<br/>
-          <span class="text-gradient">Lắp Ráp Dễ Như Lego.</span>
+          {{ t('hero.titleLine1') }}<br/>
+          <span class="text-gradient">{{ t('hero.titleLine2') }}</span>
         </h1>
         
         <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Biến máy tính của bạn thành bộ não sáng tạo với 130+ kỹ năng AI chạy Local. Tự động hóa nội dung, SEO, quảng cáo mà không lo lộ dữ liệu.
+          {{ t('hero.subtitle') }}
         </p>
         
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
           <button @click="scrollToPricing" class="px-8 py-4 w-full sm:w-auto rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-all animate-glow-pulse shadow-[0_0_30px_rgba(157,78,221,0.4)] flex items-center justify-center gap-2">
-            Nhận License Ngay
+            {{ t('hero.ctaPrimary') }}
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </button>
           <a href="#how-it-works" class="px-8 py-4 w-full sm:w-auto rounded-xl glass-panel text-gray-300 font-medium hover:text-white transition-colors flex items-center justify-center gap-2">
-            Tìm hiểu thêm
+            {{ t('hero.ctaSecondary') }}
           </a>
         </div>
       </div>
@@ -224,8 +235,8 @@ const skills = [
     <section id="features" class="relative z-10 py-24 bg-surface-elevated/50 border-y border-white/5">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Mọi Thứ Bạn Cần Ở Một Nơi</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">Không còn phải copy-paste phức tạp. Hệ thống tự động lưu trữ và quản lý tài sản số của bạn một cách thông minh.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('features.title') }}</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">{{ t('features.subtitle') }}</p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-6">
@@ -236,8 +247,8 @@ const skills = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">130+ AI Marketing Skills</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Bộ sưu tập câu lệnh prompt chuyên sâu từ Copywriting, SEO, Analytics đến Ads Management. Chép 1 click là dùng ngay.</p>
+            <h3 class="text-xl font-bold text-white mb-3">{{ t('features.items.0.title') }}</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">{{ t('features.items.0.desc') }}</p>
           </div>
           <!-- Feature 2 -->
           <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
@@ -246,8 +257,8 @@ const skills = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">UI Command Center</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Giao diện trực quan giúp bạn quản lý Brand Voice, Fonts, Logos và toàn bộ File (Assets) do AI tạo ra trên máy của bạn.</p>
+            <h3 class="text-xl font-bold text-white mb-3">{{ t('features.items.1.title') }}</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">{{ t('features.items.1.desc') }}</p>
           </div>
           <!-- Feature 3 -->
           <div class="glass-panel p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
@@ -256,8 +267,8 @@ const skills = [
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-white mb-3">Bảo Mật Local 100%</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Dữ liệu công ty bạn không bao giờ rời khỏi máy tính. Antigravity chạy hoàn toàn Local, an toàn tuyệt đối cho doanh nghiệp.</p>
+            <h3 class="text-xl font-bold text-white mb-3">{{ t('features.items.2.title') }}</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">{{ t('features.items.2.desc') }}</p>
           </div>
         </div>
       </div>
@@ -270,10 +281,10 @@ const skills = [
         <div class="text-center mb-14">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium uppercase tracking-wider mb-5">
             <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            Skill Preview
+            {{ t('skills.badge') }}
           </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">130+ Skills Thực Chiến</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">Mỗi skill là một chuyên gia độc lập. Gõ 1 lệnh, AI tự biết phải làm gì — từ nghiên cứu từ khóa đến viết quảng cáo hoàn chỉnh.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('skills.title') }}</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">{{ t('skills.subtitle') }}</p>
         </div>
 
         <!-- Skill Tabs -->
@@ -287,7 +298,7 @@ const skills = [
               ? 'bg-primary text-white border-primary shadow-[0_0_15px_rgba(157,78,221,0.4)]'
               : 'border-white/10 text-gray-400 hover:text-white hover:border-primary/40 bg-surface-elevated/50'"
           >
-            {{ skill.emoji }} {{ skill.label }}
+            {{ skill.emoji }} {{ t(`skillsData.${skill.id}.label`) }}
           </button>
         </div>
 
@@ -305,7 +316,7 @@ const skills = [
                     <span class="font-mono text-xs px-2 py-0.5 rounded bg-primary/15 text-primary border border-primary/20">{{ skills[activeSkill].command }}</span>
                     <span class="text-xs text-gray-500 font-mono">{{ skills[activeSkill].hint }}</span>
                   </div>
-                  <p class="text-white font-semibold mt-1">{{ skills[activeSkill].title }}</p>
+                  <p class="text-white font-semibold mt-1">{{ t(`skillsData.${skills[activeSkill].id}.title`) }}</p>
                 </div>
               </div>
               <button
@@ -313,7 +324,7 @@ const skills = [
                 class="text-xs px-3 py-1.5 rounded-lg border transition-all duration-200 font-medium"
                 :class="copied ? 'border-green-500/40 text-green-400 bg-green-500/10' : 'border-white/10 text-gray-400 hover:border-primary/40 hover:text-white'"
               >
-                {{ copied ? '✓ Copied!' : 'Copy lệnh' }}
+                {{ copied ? t('skills.copied') : t('skills.copyCmd') }}
               </button>
             </div>
 
@@ -321,34 +332,34 @@ const skills = [
             <div class="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/5">
               <!-- Left: Desc + Use Cases -->
               <div class="p-8">
-                <p class="text-gray-300 text-sm leading-relaxed mb-6">{{ skills[activeSkill].description }}</p>
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Khi nào dùng</h4>
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">{{ t(`skillsData.${skills[activeSkill].id}.description`) }}</p>
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">{{ t('skills.whenToUse') }}</h4>
                 <ul class="space-y-2">
                   <li
-                    v-for="useCase in skills[activeSkill].useCases"
-                    :key="useCase"
+                    v-for="useCase in tm(`skillsData.${skills[activeSkill].id}.useCases`)"
+                    :key="rt(useCase)"
                     class="flex items-start gap-2.5 text-sm text-gray-400"
                   >
                     <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
-                    {{ useCase }}
+                    {{ rt(useCase) }}
                   </li>
                 </ul>
               </div>
 
               <!-- Right: Output + Formulas -->
               <div class="p-8 bg-surface/40">
-                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">{{ skills[activeSkill].rightTitle }}</h4>
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">{{ t(`skillsData.${skills[activeSkill].id}.rightTitle`) }}</h4>
                 <div class="space-y-2.5">
                   <div
-                    v-for="item in skills[activeSkill].rightItems"
-                    :key="item.label"
+                    v-for="item in tm(`skillsData.${skills[activeSkill].id}.rightItems`)"
+                    :key="rt(item.label)"
                     class="flex items-center justify-between p-3 rounded-lg bg-surface-elevated/60 border border-white/5 group hover:border-primary/20 transition-colors"
                   >
                     <div>
-                      <span class="text-sm text-white font-medium">{{ item.label }}</span>
-                      <p v-if="item.desc" class="text-xs text-gray-500 mt-0.5">{{ item.desc }}</p>
+                      <span class="text-sm text-white font-medium">{{ rt(item.label) }}</span>
+                      <p v-if="item.desc" class="text-xs text-gray-500 mt-0.5">{{ rt(item.desc) }}</p>
                     </div>
-                    <span v-if="item.tag" class="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-mono">{{ item.tag }}</span>
+                    <span v-if="item.tag" class="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/15 font-mono">{{ rt(item.tag) }}</span>
                   </div>
                 </div>
               </div>
@@ -357,9 +368,7 @@ const skills = [
         </transition>
 
         <!-- Browse all hint -->
-        <p class="text-center text-sm text-gray-500 mt-8">
-          🔥 Đây chỉ là <span class="text-primary font-medium">5/130+</span> skills. Mua license để mở khoá toàn bộ.
-        </p>
+        <p class="text-center text-sm text-gray-500 mt-8" v-html="t('skills.moreHint')"></p>
       </div>
     </section>
 
@@ -368,15 +377,15 @@ const skills = [
     <section id="how-it-works" class="relative z-10 py-24">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Triển Khai Trong 3 Bước</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('howItWorks.title') }}</h2>
         </div>
         
         <div class="space-y-12">
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">1</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">Cài Đặt Lõi Hệ Thống</h3>
-              <p class="text-gray-400 text-sm mb-4">Mở Terminal và tải lõi KJ Studio CLI bằng lệnh NPM.</p>
+              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.0.title') }}</h3>
+              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.0.desc') }}</p>
               <div class="bg-background rounded-lg p-3 font-mono text-xs text-green-400 border border-white/5">
                 > npm install -g @kjantigravity/cli<br/>
                 > kj-kit init -k marketing
@@ -387,10 +396,10 @@ const skills = [
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">2</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">Nhập Mã Quyền (License)</h3>
-              <p class="text-gray-400 text-sm mb-4">Sau khi cài đặt, điền GitHub Personal Access Token của bạn để xác thực quyền lợi truy cập mã nguồn gốc.</p>
+              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.1.title') }}</h3>
+              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.1.desc') }}</p>
               <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
-                <span class="text-primary">Token:</span> ghp_xxxxxxxxxxxxxxxxxxxx
+                <span class="text-primary">{{ t('howItWorks.steps.1.label') }}</span> ghp_xxxxxxxxxxxxxxxxxxxx
               </div>
             </div>
           </div>
@@ -398,8 +407,8 @@ const skills = [
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">3</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">Mở Dashboard & Tận Hưởng</h3>
-              <p class="text-gray-400 text-sm mb-4">Chỉ cần gõ 1 câu lệnh, toàn bộ trung tâm chỉ huy sẽ mở ra trên trình duyệt của bạn.</p>
+              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.2.title') }}</h3>
+              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.2.desc') }}</p>
               <div class="bg-background rounded-lg p-3 font-mono text-xs text-primary border border-white/5">
                 > kj-kit dashboard
               </div>
@@ -413,51 +422,51 @@ const skills = [
     <section id="pricing" class="relative z-10 py-24 bg-surface border-y border-white/5">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Trọn Đời License</h2>
-          <p class="text-gray-400 max-w-xl mx-auto">Mua 1 lần, dùng trọn đời. Nâng cấp miễn phí. Trở thành học trò chân truyền với đầy đủ binh khí.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('pricing.title') }}</h2>
+          <p class="text-gray-400 max-w-xl mx-auto">{{ t('pricing.subtitle') }}</p>
         </div>
         
         <div class="glass-panel max-w-lg mx-auto rounded-3xl overflow-hidden relative border-primary/30 shadow-[0_0_40px_rgba(157,78,221,0.15)]">
           <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
           <div class="p-8 sm:p-10 text-center relative z-10">
-            <h3 class="text-2xl font-bold text-white mb-2">Marketing License</h3>
+            <h3 class="text-2xl font-bold text-white mb-2">{{ t('pricing.cardTitle') }}</h3>
             <div class="flex items-end justify-center gap-1 my-6">
-              <span class="text-5xl font-bold text-white">$49</span>
-              <span class="text-gray-400 mb-1">/ vĩnh viễn</span>
+              <span class="text-5xl font-bold text-white">{{ t('pricing.price') }}</span>
+              <span class="text-gray-400 mb-1">{{ t('pricing.period') }}</span>
             </div>
             
             <ul class="text-left space-y-4 mb-8">
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300">Truy cập toàn bộ 130+ Marketing Skills</span>
+                <span class="text-gray-300" v-html="t('pricing.features.0')"></span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300">Giao diện Dashboard Local siêu xịn</span>
+                <span class="text-gray-300" v-html="t('pricing.features.1')"></span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300">Tự động scan Assets và bài viết</span>
+                <span class="text-gray-300" v-html="t('pricing.features.2')"></span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300">Update tính năng và skills mới miễn phí</span>
+                <span class="text-gray-300" v-html="t('pricing.features.3')"></span>
               </li>
               <li class="flex items-start gap-3 pt-4 border-t border-white/10">
-                <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span class="text-gray-400 text-sm">Tuỳ chọn: Dịch vụ cài đặt tận giường (Setup từ A-Z qua UltraViewer) thêm <strong>$10</strong> phí nhân sự.</span>
+                <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="text-gray-400 text-sm" v-html="t('pricing.optional')"></span>
               </li>
             </ul>
             
             <button @click="buyLicense" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)]">
-              Nhắn Tin Mua Ngay
+              {{ t('pricing.cta') }}
             </button>
             <div class="mt-4 space-y-1.5 text-center">
-              <p class="text-xs text-gray-500">Sẽ mở khung chat Facebook fb.com/kentjuno</p>
+              <p class="text-xs text-gray-500">{{ t('pricing.hint1') }}</p>
               <p class="text-xs text-amber-500/80 font-medium">
-                ⚠️ Tất cả giao dịch là không hoàn tiền (Non-refundable). Vui lòng đọc
-                <router-link to="/terms" class="underline hover:text-amber-400 transition-colors">Điều khoản dịch vụ</router-link>
-                trước khi mua.
+                {{ t('pricing.hint2Prefix') }}
+                <router-link to="/terms" class="underline hover:text-amber-400 transition-colors">{{ t('pricing.hint2Link') }}</router-link>
+                {{ t('pricing.hint2Suffix') }}
               </p>
             </div>
 

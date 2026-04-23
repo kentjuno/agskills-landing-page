@@ -1,0 +1,377 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it Works",
+    "buyLicense": "Buy License"
+  },
+  "hero": {
+    "badge": "Antigravity Marketing Dashboard",
+    "titleLine1": "Master AI Marketing.",
+    "titleLine2": "Assemble Like Lego.",
+    "subtitle": "Turn your computer into a creative brain with 130+ local AI skills. Automate content, SEO, and ads without data privacy concerns.",
+    "ctaPrimary": "Get License Now",
+    "ctaSecondary": "Learn More"
+  },
+  "features": {
+    "title": "Everything You Need in One Place",
+    "subtitle": "No more complex copy-pasting. The system intelligently stores and manages your digital assets automatically.",
+    "items": [
+      {
+        "title": "130+ AI Marketing Skills",
+        "desc": "A collection of deep prompts from Copywriting, SEO, Analytics to Ads Management. One click to copy and use."
+      },
+      {
+        "title": "UI Command Center",
+        "desc": "Intuitive interface to manage your Brand Voice, Fonts, Logos, and all AI-generated files (Assets) directly on your machine."
+      },
+      {
+        "title": "100% Local Security",
+        "desc": "Your company data never leaves your computer. Antigravity runs entirely locally, ensuring absolute safety for enterprises."
+      }
+    ]
+  },
+  "skills": {
+    "badge": "Skill Preview",
+    "title": "130+ Practical Skills",
+    "subtitle": "Each skill is an independent expert. Type 1 command, AI knows exactly what to do — from keyword research to full ad copy.",
+    "copyCmd": "Copy command",
+    "copied": "✓ Copied!",
+    "whenToUse": "When to use",
+    "moreHint": "🔥 These are just <span class=\"text-primary font-medium\">5 of 130+</span> skills. Buy a license to unlock them all."
+  },
+  "howItWorks": {
+    "title": "Deploy in 3 Steps",
+    "steps": [
+      {
+        "title": "Install Core System",
+        "desc": "Open Terminal and install the KJ Studio CLI core via NPM."
+      },
+      {
+        "title": "Enter License Key",
+        "desc": "After installation, enter your GitHub Personal Access Token to authenticate access to the source code.",
+        "label": "Token:"
+      },
+      {
+        "title": "Open Dashboard & Enjoy",
+        "desc": "Just type one command, and the entire command center opens up in your browser."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Lifetime License",
+    "subtitle": "Pay once, own the source code forever. Full rights to use it across all your projects.",
+    "cardTitle": "Marketing License",
+    "price": "$49",
+    "period": "/ lifetime",
+    "features": [
+      "One-time payment, 7-day repo access to download the code.",
+      "Own the code forever. Unlimited projects (Personal & Commercial).",
+      "All 130+ Marketing Skills and premium Dashboard UI.",
+      "Renew update access after 7 days: only <strong>$10</strong>/time."
+    ],
+    "optional": "Optional: Full remote setup service (via UltraViewer) for an extra <strong>$10</strong> labor fee.",
+    "cta": "Message to Buy Now",
+    "hint1": "Opens Facebook chat: fb.com/kentjuno",
+    "hint2Prefix": "⚠️ All transactions are non-refundable. Please read our",
+    "hint2Link": "Terms of Service",
+    "hint2Suffix": "before purchasing."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance of Terms",
+        "content": [
+          "By purchasing and using KJ Studio Marketing Dashboard (\"Software\"), you agree to abide by the terms and conditions outlined in this document. If you do not agree to any of these terms, please do not use the Software."
+        ]
+      },
+      {
+        "title": "2. License",
+        "list": [
+          "You are granted a non-exclusive, non-transferable license to install and use the Software on devices owned by you personally.",
+          "Access to the Github repository (via PAT) is valid for 7 days from the time of payment. You are allowed to download the source code and use it forever across unlimited projects (commercial and personal).",
+          "You are <strong>not</strong> allowed to share your Github Personal Access Token (PAT) with 3rd parties. You are also <strong>not</strong> allowed to resell or redistribute our original source code as a competing product."
+        ]
+      },
+      {
+        "title": "3. Intellectual Property",
+        "content": [
+          "All source code, user interfaces, branding, and documentation (including sample AI Prompts) are copyrighted by KJ Studio. Reselling, redistributing, or copying the source code to create commercial derivative products is strictly prohibited."
+        ]
+      },
+      {
+        "title": "4. Disclaimer of Warranty",
+        "content": [
+          "The Software is provided \"As is\". Although we have made our best efforts to ensure stable operation, KJ Studio does not warrant that the Software will be error-free or compatible with all specific operating system/hardware environments of users."
+        ]
+      },
+      {
+        "title": "5. Limitation of Liability",
+        "content": [
+          "In no event shall KJ Studio be liable for any direct, indirect, or incidental damages (including but not limited to loss of data, loss of revenue) arising out of the use or inability to use the Software."
+        ]
+      },
+      {
+        "title": "6. Updates & Support",
+        "content": [
+          "You are granted access to download the source code within 7 days of payment. If you want to receive new feature updates after 7 days, you can purchase an Update Renewal Package for $10/time. Technical support will be provided via personal Facebook channel or Discord community. Remote setup fee ($10) only applies to the first setup (if requested)."
+        ]
+      },
+      {
+        "title": "7. Refund Policy",
+        "alertTitle": "⚠️ All transactions are NON-REFUNDABLE",
+        "alertDesc": "By completing your payment, you acknowledge that you have read and agree to this policy.",
+        "list": [
+          "Due to the nature of digital software — once a license has been issued and you can access the source code/resources — <strong>we do not offer refunds of any kind.</strong>",
+          "This applies to all cases, including but not limited to: change of mind, system incompatibility, or not using the product.",
+          "Before purchasing, please contact <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a> if you have any questions regarding features or compatibility.",
+          "Remote setup fee ($10) is also non-refundable once the support session has been completed."
+        ]
+      },
+      {
+        "title": "Contact",
+        "content": [
+          "If you have any questions about these Terms, please contact us directly via Facebook: <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a>."
+        ]
+      }
+    ]
+  },
+  "skillsData": {
+    "copywriting": {
+      "label": "Copywriting",
+      "title": "Conversion Copywriting Engine",
+      "description": "Apply 6 practical copy formulas (AIDA, PAS, BAB, 4Ps, 4Us, FAB) to write high-converting content for landing pages, emails, and ads. Automatically extract writing style from your files.",
+      "useCases": [
+        "Write catchy headlines/subject lines",
+        "Landing page copy using AIDA",
+        "Email campaign sequences",
+        "CTA optimization A/B variants",
+        "Apply brand voice from internal docs"
+      ],
+      "rightTitle": "Copy Formulas",
+      "rightItems": [
+        {
+          "label": "AIDA",
+          "desc": "Attention → Interest → Desire → Action",
+          "tag": "Landing Page"
+        },
+        {
+          "label": "PAS",
+          "desc": "Problem → Agitate → Solution",
+          "tag": "Email / Sales"
+        },
+        {
+          "label": "BAB",
+          "desc": "Before → After → Bridge",
+          "tag": "Testimonial"
+        },
+        {
+          "label": "4Us",
+          "desc": "Urgent + Unique + Useful + Ultra-specific",
+          "tag": "Headline"
+        },
+        {
+          "label": "FAB",
+          "desc": "Feature → Advantage → Benefit",
+          "tag": "Product"
+        }
+      ]
+    },
+    "seo": {
+      "label": "SEO",
+      "title": "SEO Intelligence Suite",
+      "description": "Keyword research with real data (volume, CPC, difficulty) via ReviewWeb.site API. Connect Google Search Console to analyze traffic, CTR, and position. Generate JSON-LD schema and check Core Web Vitals.",
+      "useCases": [
+        "Keyword research with real volume data",
+        "Competitor analysis (traffic, top keywords)",
+        "Comprehensive technical SEO audit",
+        "Generate JSON-LD schema for rich snippets",
+        "Programmatic SEO template generation"
+      ],
+      "rightTitle": "Integrated Scripts",
+      "rightItems": [
+        {
+          "label": "gsc-query.cjs",
+          "desc": "Google Search Console API",
+          "tag": "OAuth2"
+        },
+        {
+          "label": "analyze-keywords.cjs",
+          "desc": "Keyword research (ReviewWeb API)",
+          "tag": "Real Data"
+        },
+        {
+          "label": "audit-core-web-vitals.cjs",
+          "desc": "CWV measurement",
+          "tag": "LCP/CLS/FID"
+        },
+        {
+          "label": "generate-schema.cjs",
+          "desc": "JSON-LD Schema generator",
+          "tag": "Rich Snippet"
+        },
+        {
+          "label": "pseo-generator.cjs",
+          "desc": "Programmatic SEO pages",
+          "tag": "Scale"
+        }
+      ]
+    },
+    "ads": {
+      "label": "Ads Management",
+      "title": "Multi-Platform Ads Engine",
+      "description": "Manage paid ads on Google, Meta, LinkedIn, TikTok directly via APIs. Write ad copy, optimize budgets, track ROAS. Create AI ad images/videos (Gemini + Veo 3.1).",
+      "useCases": [
+        "Create and optimize ad campaigns",
+        "Write ad copy per platform (Google, Meta, TikTok)",
+        "Generate ad images using AI (Gemini Pro)",
+        "Create 15s video ads with Veo 3.1",
+        "A/B testing strategy and ROAS tracking"
+      ],
+      "rightTitle": "Platform API Scripts",
+      "rightItems": [
+        {
+          "label": "google-ads-manager.py",
+          "desc": "Create campaign, pause, report",
+          "tag": "Google Ads"
+        },
+        {
+          "label": "meta-ads-manager.py",
+          "desc": "Create ad, adset, campaign",
+          "tag": "Meta / FB"
+        },
+        {
+          "label": "Gemini Pro Image",
+          "desc": "Generate 4K quality ad images",
+          "tag": "AI Image"
+        },
+        {
+          "label": "Veo 3.1 Video",
+          "desc": "Generate 15s video ads",
+          "tag": "AI Video"
+        }
+      ]
+    },
+    "social": {
+      "label": "Social Media",
+      "title": "Social Media Content Factory",
+      "description": "Create optimized content for 7 platforms: X/Twitter, Facebook, Instagram, LinkedIn, TikTok, YouTube, Threads. Auto-write hooks, research hashtags, and schedule posts via API.",
+      "useCases": [
+        "Write posts in platform-standard formats",
+        "Thread, carousel, reel script creation",
+        "Viral hook writing for TikTok/Reels",
+        "Content calendar planning",
+        "Auto-scheduling via API"
+      ],
+      "rightTitle": "Supported Platforms",
+      "rightItems": [
+        {
+          "label": "X / Twitter",
+          "desc": "Thread, post, hook writing",
+          "tag": "API ✓"
+        },
+        {
+          "label": "Facebook & Instagram",
+          "desc": "Feed, Stories, Reels",
+          "tag": "API ✓"
+        },
+        {
+          "label": "LinkedIn",
+          "desc": "B2B content, thought leadership",
+          "tag": "API ✓"
+        },
+        {
+          "label": "TikTok",
+          "desc": "Script, hook, hashtag research",
+          "tag": "API ✓"
+        },
+        {
+          "label": "YouTube",
+          "desc": "Script, description, tags",
+          "tag": "API ✓"
+        }
+      ]
+    },
+    "content": {
+      "label": "Content Strategy",
+      "title": "Content Strategy Framework",
+      "description": "Build long-term content strategies with Content Pillar mapping, editorial calendars, and content audit workflows. Automatically repurpose 1 blog post into social posts, email sequences, and video scripts.",
+      "useCases": [
+        "Build Content Pillars (3-5 pillars)",
+        "3/6 month editorial calendars",
+        "Blog post planning by keyword intent",
+        "Content audits (Keep / Update / Delete)",
+        "Repurpose 1 content → multiple formats"
+      ],
+      "rightTitle": "Content Workflow",
+      "rightItems": [
+        {
+          "label": "Content Strategy",
+          "desc": "Audit → Pillar → Calendar",
+          "tag": "7 steps"
+        },
+        {
+          "label": "Blog Planning",
+          "desc": "Keyword → Brief → Draft → Publish",
+          "tag": "SEO-first"
+        },
+        {
+          "label": "Repurpose Engine",
+          "desc": "Blog → Social + Email + Video",
+          "tag": "x3 Output"
+        },
+        {
+          "label": "Content Audit",
+          "desc": "Keep, Update, Consolidate, Delete",
+          "tag": "Quarterly"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "rights": "© 2026 KJ Studio. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: April 2026",
+    "coreCommitment": {
+      "title": "Core Commitment: 100% Local, Zero Data Collection",
+      "desc": "KJ Studio Marketing Dashboard is designed with a Local-first architecture (Running entirely on your personal machine). <strong>We do not have a central server to track, store, or read your content, marketing campaigns, or customer data.</strong> Your data belongs to you and resides only on your hard drive."
+    },
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "desc": "Due to the nature of local software, we collect extremely minimal information:",
+        "list": [
+          "<strong>Purchase Information:</strong> Name, Email, phone number (if any) when you make a payment transaction to buy a License.",
+          "<strong>Authentication Information:</strong> The system calls the GitHub API to authenticate your GitHub PAT access (to ensure you are the buyer). This process occurs directly between your computer and GitHub servers."
+        ]
+      },
+      {
+        "title": "2. What Do We NOT Collect?",
+        "desc": "We absolutely <strong>DO NOT</strong> collect, transmit, or store the following information:",
+        "list": [
+          "Article content, images, digital assets you create in the <code>.antigravity</code> folder.",
+          "The Prompts you enter.",
+          "Your access history or interactions inside the Marketing Dashboard.",
+          "Source code or data from other personal files on your computer."
+        ]
+      },
+      {
+        "title": "3. Cookies and Tracking",
+        "desc": "This Landing Page website may use basic cookies (such as Cloudflare Web Analytics) to count the number of visitors. These tools only collect aggregated, anonymous data and are not used to identify you personally."
+      },
+      {
+        "title": "4. Information Sharing",
+        "desc": "We promise not to sell, rent, or trade your purchase information (Email, Name) with any third parties for marketing purposes."
+      },
+      {
+        "title": "Contact",
+        "desc": "If you have any questions about our data privacy policies, please message us directly via Facebook: <a href=\"https://fb.com/kentjuno\" class=\"text-primary hover:underline\" target=\"_blank\">fb.com/kentjuno</a>."
+      }
+    ]
+  }
+}

@@ -1,8 +1,10 @@
 <script setup>
 import { useRouter, useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const router = useRouter()
 const route = useRoute()
+const { t } = useI18n()
 
 const scrollToPricing = () => {
   if (route.path !== '/') {
@@ -33,10 +35,10 @@ const scrollToPricing = () => {
           <span class="text-xl font-bold tracking-wider text-white">KJ STUDIO</span>
         </router-link>
         <div class="flex items-center gap-6 text-sm font-medium">
-          <router-link to="/#features" class="hidden md:block hover:text-primary transition-colors">Tính Năng</router-link>
-          <router-link to="/#how-it-works" class="hidden md:block hover:text-primary transition-colors">Cách Hoạt Động</router-link>
+          <router-link to="/#features" class="hidden md:block hover:text-primary transition-colors">{{ t('nav.features') }}</router-link>
+          <router-link to="/#how-it-works" class="hidden md:block hover:text-primary transition-colors">{{ t('nav.howItWorks') }}</router-link>
           <button @click="scrollToPricing" class="px-5 py-2 rounded-full bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-all hover:shadow-[0_0_20px_rgba(157,78,221,0.3)]">
-            Mua License
+            {{ t('nav.buyLicense') }}
           </button>
         </div>
       </div>
@@ -58,10 +60,10 @@ const scrollToPricing = () => {
         <span class="font-bold text-gray-300">KJ STUDIO</span>
       </div>
       <div class="flex justify-center gap-6 mb-4 text-sm text-gray-400">
-        <router-link to="/terms" class="hover:text-primary transition-colors">Điều khoản dịch vụ</router-link>
-        <router-link to="/privacy" class="hover:text-primary transition-colors">Chính sách bảo mật</router-link>
+        <router-link to="/terms" class="hover:text-primary transition-colors">{{ t('footer.terms') }}</router-link>
+        <router-link to="/privacy" class="hover:text-primary transition-colors">{{ t('footer.privacy') }}</router-link>
       </div>
-      <p class="text-gray-500 text-sm">© 2026 KJ Studio. All rights reserved.</p>
+      <p class="text-gray-500 text-sm">{{ t('footer.rights') }}</p>
     </footer>
   </div>
 </template>
