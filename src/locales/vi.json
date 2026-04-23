@@ -40,7 +40,7 @@
     "moreHint": "🔥 Đây chỉ là <span class=\"text-primary font-medium\">5/130+</span> skills. Mua license để mở khoá toàn bộ."
   },
   "howItWorks": {
-    "title": "Triển Khai Trong 3 Bước",
+    "title": "Triển Khai Trong 4 Bước",
     "steps": [
       {
         "title": "Cài Đặt Lõi Hệ Thống",
@@ -50,6 +50,11 @@
         "title": "Nhập Mã Quyền (License)",
         "desc": "Sau khi cài đặt, điền GitHub Personal Access Token của bạn để xác thực quyền lợi truy cập mã nguồn gốc.",
         "label": "Token:"
+      },
+      {
+        "title": "Mở Antigravity Desktop",
+        "desc": "Bắt buộc: Khởi động ứng dụng Antigravity Desktop để kích hoạt AI engine và cấp quyền truy cập file trên máy tính của bạn.",
+        "label": "Trạng thái:"
       },
       {
         "title": "Mở Dashboard & Tận Hưởng",

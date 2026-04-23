@@ -381,6 +381,7 @@ const skills = [
         </div>
         
         <div class="space-y-12">
+          <!-- Step 1 -->
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">1</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
@@ -393,6 +394,7 @@ const skills = [
             </div>
           </div>
           
+          <!-- Step 2 -->
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">2</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
@@ -404,11 +406,27 @@ const skills = [
             </div>
           </div>
 
+          <!-- Step 3: Antigravity Desktop -->
           <div class="flex flex-col md:flex-row gap-6 items-center">
             <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">3</div>
             <div class="flex-1 glass-panel p-6 rounded-xl w-full">
               <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.2.title') }}</h3>
               <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.2.desc') }}</p>
+              <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
+                <span class="text-primary">{{ t('howItWorks.steps.2.label') }}</span>
+                <span class="text-green-400 flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Running
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col md:flex-row gap-6 items-center">
+            <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">4</div>
+            <div class="flex-1 glass-panel p-6 rounded-xl w-full">
+              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.3.title') }}</h3>
+              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.3.desc') }}</p>
               <div class="bg-background rounded-lg p-3 font-mono text-xs text-primary border border-white/5">
                 > kj-kit dashboard
               </div>

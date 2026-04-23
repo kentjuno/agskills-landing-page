@@ -40,7 +40,7 @@
     "moreHint": "🔥 These are just <span class=\"text-primary font-medium\">5 of 130+</span> skills. Buy a license to unlock them all."
   },
   "howItWorks": {
-    "title": "Deploy in 3 Steps",
+    "title": "Deploy in 4 Steps",
     "steps": [
       {
         "title": "Install Core System",
@@ -50,6 +50,11 @@
         "title": "Enter License Key",
         "desc": "After installation, enter your GitHub Personal Access Token to authenticate access to the source code.",
         "label": "Token:"
+      },
+      {
+        "title": "Start Antigravity Desktop",
+        "desc": "Mandatory: Open the Antigravity Desktop application to enable the local AI engine and grant file access.",
+        "label": "Status:"
       },
       {
         "title": "Open Dashboard & Enjoy",
