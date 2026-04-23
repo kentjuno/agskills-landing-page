@@ -40,6 +40,20 @@
         </section>
 
         <section>
+          <h2 class="text-2xl font-bold text-primary mb-4">7. Chính sách hoàn tiền (Refund Policy)</h2>
+          <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-4">
+            <p class="text-amber-300 font-semibold mb-1">⚠️ Tất cả giao dịch là KHÔNG HOÀN TIỀN (Non-refundable)</p>
+            <p class="text-gray-300 text-sm">Bằng việc hoàn tất thanh toán, bạn xác nhận đã hiểu và đồng ý với chính sách này.</p>
+          </div>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Do tính chất của phần mềm kỹ thuật số — sau khi license được cấp và bạn có thể truy cập vào mã nguồn/tài nguyên — <strong>chúng tôi không hỗ trợ hoàn tiền dưới bất kỳ hình thức nào.</strong></li>
+            <li>Điều này áp dụng cho tất cả các trường hợp, bao gồm nhưng không giới hạn ở: thay đổi ý định, không tương thích hệ thống, hoặc không sử dụng đến.</li>
+            <li>Trước khi mua, vui lòng liên hệ <a href="https://fb.com/kentjuno" class="text-primary hover:underline" target="_blank">fb.com/kentjuno</a> nếu bạn có bất kỳ câu hỏi nào về tính năng hoặc khả năng tương thích.</li>
+            <li>Phí cài đặt từ xa ($10) cũng không hoàn tiền sau khi phiên hỗ trợ đã được thực hiện.</li>
+          </ul>
+        </section>
+
+        <section>
           <h2 class="text-2xl font-bold text-white mb-4 mt-12 border-t border-white/10 pt-8">Liên hệ</h2>
           <p>Nếu bạn có bất kỳ câu hỏi nào về Điều khoản này, vui lòng liên hệ trực tiếp với chúng tôi qua Facebook: <a href="https://fb.com/kentjuno" class="text-primary hover:underline" target="_blank">fb.com/kentjuno</a>.</p>
         </section>

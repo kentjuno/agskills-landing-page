@@ -452,7 +452,15 @@ const skills = [
             <button @click="buyLicense" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)]">
               Nhắn Tin Mua Ngay
             </button>
-            <p class="text-xs text-gray-500 mt-4">Sẽ mở khung chat Facebook fb.com/kentjuno</p>
+            <div class="mt-4 space-y-1.5 text-center">
+              <p class="text-xs text-gray-500">Sẽ mở khung chat Facebook fb.com/kentjuno</p>
+              <p class="text-xs text-amber-500/80 font-medium">
+                ⚠️ Tất cả giao dịch là không hoàn tiền (Non-refundable). Vui lòng đọc
+                <router-link to="/terms" class="underline hover:text-amber-400 transition-colors">Điều khoản dịch vụ</router-link>
+                trước khi mua.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
