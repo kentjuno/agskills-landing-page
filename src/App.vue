@@ -65,3 +65,19 @@ const scrollToPricing = () => {
     </footer>
   </div>
 </template>
+
+<style scoped>
+/* Skill card fade transition */
+.skill-fade-enter-active,
+.skill-fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.skill-fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.skill-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+</style>
