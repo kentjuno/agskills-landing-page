@@ -65,7 +65,17 @@
   "pricing": {
     "title": "Trọn Đời License",
     "subtitle": "Thanh toán 1 lần, sở hữu source code trọn đời. Toàn quyền sử dụng cho mọi dự án của bạn.",
-    "cardTitle": "Marketing License",
+    "demoCardTitle": "Freemium Demo",
+    "demoPrice": "Miễn Phí",
+    "demoPeriod": "/ trải nghiệm",
+    "demoFeatures": [
+      "Trải nghiệm 10 Marketing Skills phễu mạnh nhất.",
+      "Không yêu cầu cung cấp PAT / License Key.",
+      "Giao diện UI Dashboard đầy đủ tính năng.",
+      "Khóa 117+ Premium Skills."
+    ],
+    "demoHint": "Mở Terminal và copy lệnh cài đặt bên dưới.",
+    "cardTitle": "Full License",
     "price": "$49",
     "period": "/ vĩnh viễn",
     "features": [

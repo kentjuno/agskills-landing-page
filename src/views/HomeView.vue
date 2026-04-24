@@ -438,56 +438,98 @@ const skills = [
 
     <!-- Pricing Section -->
     <section id="pricing" class="relative z-10 py-24 bg-surface border-y border-white/5">
-      <div class="max-w-4xl mx-auto px-6">
+      <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('pricing.title') }}</h2>
           <p class="text-gray-400 max-w-xl mx-auto">{{ t('pricing.subtitle') }}</p>
         </div>
         
-        <div class="glass-panel max-w-lg mx-auto rounded-3xl overflow-hidden relative border-primary/30 shadow-[0_0_40px_rgba(157,78,221,0.15)]">
-          <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-          <div class="p-8 sm:p-10 text-center relative z-10">
-            <h3 class="text-2xl font-bold text-white mb-2">{{ t('pricing.cardTitle') }}</h3>
-            <div class="flex items-end justify-center gap-1 my-6">
-              <span class="text-5xl font-bold text-white">{{ t('pricing.price') }}</span>
-              <span class="text-gray-400 mb-1">{{ t('pricing.period') }}</span>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Demo Card -->
+          <div class="glass-panel rounded-3xl overflow-hidden relative border-white/10 hover:border-primary/30 transition-colors flex flex-col">
+            <div class="p-8 sm:p-10 text-center relative z-10 flex-1 flex flex-col">
+              <h3 class="text-2xl font-bold text-white mb-2">{{ t('pricing.demoCardTitle') }}</h3>
+              <div class="flex items-end justify-center gap-1 my-6">
+                <span class="text-5xl font-bold text-white">{{ t('pricing.demoPrice') }}</span>
+                <span class="text-gray-400 mb-1">{{ t('pricing.demoPeriod') }}</span>
+              </div>
+              
+              <ul class="text-left space-y-4 mb-8 flex-1">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gray-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.demoFeatures.0')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gray-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.demoFeatures.1')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gray-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.demoFeatures.2')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.demoFeatures.3')"></span>
+                </li>
+              </ul>
+              
+              <div class="mt-auto">
+                <div class="bg-background rounded-lg p-3 font-mono text-xs text-primary border border-white/5 text-left mb-3">
+                  > npm install -g @kjantigravity/cli<br/>
+                  > kj-kit demo
+                </div>
+                <p class="text-xs text-gray-500 text-center">{{ t('pricing.demoHint') }}</p>
+              </div>
             </div>
-            
-            <ul class="text-left space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300" v-html="t('pricing.features.0')"></span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300" v-html="t('pricing.features.1')"></span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300" v-html="t('pricing.features.2')"></span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-gray-300" v-html="t('pricing.features.3')"></span>
-              </li>
-              <li class="flex items-start gap-3 pt-4 border-t border-white/10">
-                <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span class="text-gray-400 text-sm" v-html="t('pricing.optional')"></span>
-              </li>
-            </ul>
-            
-            <button @click="buyLicense" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)]">
-              {{ t('pricing.cta') }}
-            </button>
-            <div class="mt-4 space-y-1.5 text-center">
-              <p class="text-xs text-gray-500">{{ t('pricing.hint1') }}</p>
-              <p class="text-xs text-amber-500/80 font-medium">
-                {{ t('pricing.hint2Prefix') }}
-                <router-link to="/terms" class="underline hover:text-amber-400 transition-colors">{{ t('pricing.hint2Link') }}</router-link>
-                {{ t('pricing.hint2Suffix') }}
-              </p>
-            </div>
+          </div>
 
+          <!-- Pro Card -->
+          <div class="glass-panel rounded-3xl overflow-hidden relative border-primary/30 shadow-[0_0_40px_rgba(157,78,221,0.15)] flex flex-col">
+            <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            <div class="p-8 sm:p-10 text-center relative z-10 flex-1 flex flex-col">
+              <h3 class="text-2xl font-bold text-white mb-2">{{ t('pricing.cardTitle') }}</h3>
+              <div class="flex items-end justify-center gap-1 my-6">
+                <span class="text-5xl font-bold text-white">{{ t('pricing.price') }}</span>
+                <span class="text-gray-400 mb-1">{{ t('pricing.period') }}</span>
+              </div>
+              
+              <ul class="text-left space-y-4 mb-8 flex-1">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.features.0')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.features.1')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.features.2')"></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-gray-300" v-html="t('pricing.features.3')"></span>
+                </li>
+                <li class="flex items-start gap-3 pt-4 border-t border-white/10">
+                  <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span class="text-gray-400 text-sm" v-html="t('pricing.optional')"></span>
+                </li>
+              </ul>
+              
+              <div class="mt-auto">
+                <button @click="buyLicense" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary-hover transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)]">
+                  {{ t('pricing.cta') }}
+                </button>
+                <div class="mt-4 space-y-1.5 text-center">
+                  <p class="text-xs text-gray-500">{{ t('pricing.hint1') }}</p>
+                  <p class="text-xs text-amber-500/80 font-medium">
+                    {{ t('pricing.hint2Prefix') }}
+                    <router-link to="/terms" class="underline hover:text-amber-400 transition-colors">{{ t('pricing.hint2Link') }}</router-link>
+                    {{ t('pricing.hint2Suffix') }}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

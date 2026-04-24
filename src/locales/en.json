@@ -64,8 +64,18 @@
   },
   "pricing": {
     "title": "Lifetime License",
-    "subtitle": "Pay once, own the source code forever. Full rights to use it across all your projects.",
-    "cardTitle": "Marketing License",
+    "subtitle": "Pay once, own the source code forever. Unlimited usage for all your projects.",
+    "demoCardTitle": "Freemium Demo",
+    "demoPrice": "Free",
+    "demoPeriod": "/ trial",
+    "demoFeatures": [
+      "Experience 10 core Marketing Skills.",
+      "No PAT / License Key required.",
+      "Full-featured Dashboard UI.",
+      "117+ Premium Skills locked."
+    ],
+    "demoHint": "Open Terminal and copy the install command below.",
+    "cardTitle": "Full License",
     "price": "$49",
     "period": "/ lifetime",
     "features": [
