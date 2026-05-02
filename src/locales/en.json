@@ -43,7 +43,7 @@
     "title": "AI-Powered Installation",
     "subtitle": "Don't know how to code? No problem! Let your AI assistant automatically install the entire system for you with just 1 Copy-Paste.",
     "aiBoxTitle": "100% Automated Setup",
-    "aiBoxDesc": "Open an empty folder in VS Code (or browser with Antigravity AI). Copy the prompt below into the AI chat box and press Enter:",
+    "aiBoxDesc": "Open the Antigravity AI application. Copy the magic prompt below into the chat box and press Enter:",
     "tabs": {
       "demo": "Demo Version",
       "pro": "Pro Version"

@@ -43,7 +43,7 @@
     "title": "Cài Đặt Cực Đỉnh Bằng AI",
     "subtitle": "Bạn không biết code? Không sao cả! Vì bạn đang dùng công cụ AI, hãy để chính AI tự tay cài đặt hệ thống này cho bạn chỉ với 1 cú Copy-Paste.",
     "aiBoxTitle": "Cài Đặt Tự Động 100%",
-    "aiBoxDesc": "Mở một thư mục trống bằng VS Code (hoặc trình duyệt có Antigravity AI). Copy đoạn mã dưới đây dán vào khung chat của AI và bấm Enter:",
+    "aiBoxDesc": "Mở ứng dụng Antigravity AI lên. Copy câu thần chú dưới đây dán vào khung chat và bấm Enter:",
     "tabs": {
       "demo": "Bản Demo (Miễn phí)",
       "pro": "Bản Pro (Trả phí)"
