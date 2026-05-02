@@ -48,8 +48,29 @@
       "demo": "Bản Demo (Miễn phí)",
       "pro": "Bản Pro (Trả phí)"
     },
-    "promptDemo": "Chào AI, tôi muốn cài đặt bản Demo của hệ thống Marketing Dashboard. Hãy tự động mở Terminal và chạy lệnh sau giúp tôi nhé:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit demo`\n\nYêu cầu:\n- Nếu hệ thống hỏi (Yes/No), hãy tự động chọn Yes.\n- Nếu máy tôi chưa cài Node.js, hãy dừng lại và đưa link tải trực tiếp cho tôi.\n- Sau khi tải xong thư mục dự án, hãy chạy lệnh khởi động server. Gửi cho tôi link http://localhost để tôi truy cập ngay!",
-    "promptPro": "Chào AI, tôi muốn cài đặt bản Full của hệ thống Marketing Dashboard. Hãy tự động mở Terminal và chạy lệnh sau giúp tôi nhé:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit init -k marketing`\n\nYêu cầu:\n- AI hãy hướng dẫn tôi nhập mã License Token để xác thực tải mã nguồn gốc.\n- Nếu máy tôi chưa cài Node.js, hãy đưa link tải trực tiếp cho tôi.\n- Sau khi tải xong thư mục dự án, hãy chạy lệnh khởi động server. Gửi cho tôi link http://localhost để tôi truy cập ngay!"
+    "promptDemo": "Chào AI, tôi muốn cài đặt bản Demo của hệ thống Marketing Dashboard. Hãy tự động mở Terminal và chạy lệnh sau giúp tôi nhé:\n\n1. `npm install -g {'@'}kjantigravity/cli`\n2. `kj-kit demo`\n\nYêu cầu:\n- Nếu hệ thống hỏi (Yes/No), hãy tự động chọn Yes.\n- Nếu máy tôi chưa cài Node.js, hãy dừng lại và đưa link tải trực tiếp cho tôi.\n- Sau khi tải xong thư mục dự án, hãy chạy lệnh khởi động server. Gửi cho tôi link http://localhost để tôi truy cập ngay!",
+    "promptPro": "Chào AI, tôi muốn cài đặt bản Full của hệ thống Marketing Dashboard. Hãy tự động mở Terminal và chạy lệnh sau giúp tôi nhé:\n\n1. `npm install -g {'@'}kjantigravity/cli`\n2. `kj-kit init -k marketing`\n\nYêu cầu:\n- AI hãy hướng dẫn tôi nhập mã License Token để xác thực tải mã nguồn gốc.\n- Nếu máy tôi chưa cài Node.js, hãy đưa link tải trực tiếp cho tôi.\n- Sau khi tải xong thư mục dự án, hãy chạy lệnh khởi động server. Gửi cho tôi link http://localhost để tôi truy cập ngay!",
+    "manualInstallTitle": "Dành cho dân chuyên (Cài đặt thủ công)",
+    "steps": [
+      {
+        "title": "Cài đặt kj-kit & Khởi tạo",
+        "desc": "Mở terminal và cài đặt bộ CLI tools toàn cầu, sau đó init dự án marketing."
+      },
+      {
+        "title": "Xác thực Github PAT",
+        "desc": "Nhập Personal Access Token khi được hỏi để tải mã nguồn.",
+        "label": "Github PAT"
+      },
+      {
+        "title": "Khởi động máy chủ Antigravity",
+        "desc": "Đảm bảo Agent Server đang chạy ở background để kết nối với các Skills.",
+        "label": "Local Server"
+      },
+      {
+        "title": "Truy cập Dashboard",
+        "desc": "Chạy lệnh để mở giao diện Marketing Dashboard trên trình duyệt của bạn."
+      }
+    ]
   },
   "pricing": {
     "title": "Trọn Đời License",

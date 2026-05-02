@@ -8,6 +8,7 @@ const i18n = createI18n({
   legacy: false, // use Composition API
   locale: savedLanguage,
   fallbackLocale: 'en',
+  warnHtmlMessage: false,
   messages: {
     en,
     vi

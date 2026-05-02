@@ -48,8 +48,29 @@
       "demo": "Demo Version",
       "pro": "Pro Version"
     },
-    "promptDemo": "Hi AI, I want to install the Demo version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit demo`\n\nRequirements:\n- If prompted for Yes/No, automatically select Yes.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!",
-    "promptPro": "Hi AI, I want to install the Full version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit init -k marketing`\n\nRequirements:\n- Guide me to enter the License Token when prompted.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!"
+    "promptDemo": "Hi AI, I want to install the Demo version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g {'@'}kjantigravity/cli`\n2. `kj-kit demo`\n\nRequirements:\n- If prompted for Yes/No, automatically select Yes.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!",
+    "promptPro": "Hi AI, I want to install the Full version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g {'@'}kjantigravity/cli`\n2. `kj-kit init -k marketing`\n\nRequirements:\n- Guide me to enter the License Token when prompted.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!",
+    "manualInstallTitle": "For Developers (Manual Install)",
+    "steps": [
+      {
+        "title": "Install kj-kit & Init",
+        "desc": "Open terminal and install the CLI tools globally, then init the marketing project."
+      },
+      {
+        "title": "Authenticate Github PAT",
+        "desc": "Enter your Personal Access Token when prompted to download the source code.",
+        "label": "Github PAT"
+      },
+      {
+        "title": "Start Antigravity Server",
+        "desc": "Ensure the Agent Server is running in the background to connect with Skills.",
+        "label": "Local Server"
+      },
+      {
+        "title": "Access Dashboard",
+        "desc": "Run the command to open the Marketing Dashboard UI in your browser."
+      }
+    ]
   },
   "pricing": {
     "title": "Lifetime License",

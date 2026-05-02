@@ -12,6 +12,7 @@ const switchLanguage = () => {
 const showPricing = ref(false)
 const activeSkill = ref(0)
 const activeInstallTab = ref('demo')
+const showManualInstall = ref(false)
 const copiedInstall = ref(false)
 const copied = ref(false)
 
@@ -438,6 +439,73 @@ const skills = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manual Install Accordion -->
+        <div class="mt-8">
+          <button 
+            @click="showManualInstall = !showManualInstall"
+            class="flex items-center gap-2 mx-auto text-sm font-medium text-gray-500 hover:text-white transition-colors"
+          >
+            <svg class="w-4 h-4 transition-transform duration-300" :class="showManualInstall ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+            {{ t('howItWorks.manualInstallTitle') }}
+          </button>
+          
+          <div v-if="showManualInstall" class="mt-8 space-y-6 animate-in slide-in-from-top-4 fade-in duration-300">
+            <!-- Step 1 -->
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-surface border border-white/10 flex items-center justify-center text-lg font-bold text-gray-400">1</div>
+              <div class="flex-1 bg-surface-elevated p-6 rounded-xl w-full border border-white/5">
+                <h3 class="text-lg font-bold text-white mb-2">{{ t('howItWorks.steps.0.title') }}</h3>
+                <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.0.desc') }}</p>
+                <div class="bg-background rounded-lg p-3 font-mono text-xs text-green-400 border border-white/5">
+                  > npm install -g @kjantigravity/cli<br/>
+                  > kj-kit init -k marketing
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-surface border border-white/10 flex items-center justify-center text-lg font-bold text-gray-400">2</div>
+              <div class="flex-1 bg-surface-elevated p-6 rounded-xl w-full border border-white/5">
+                <h3 class="text-lg font-bold text-white mb-2">{{ t('howItWorks.steps.1.title') }}</h3>
+                <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.1.desc') }}</p>
+                <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
+                  <span class="text-primary">{{ t('howItWorks.steps.1.label') }}</span> ghp_xxxxxxxxxxxxxxxxxxxx
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-surface border border-white/10 flex items-center justify-center text-lg font-bold text-gray-400">3</div>
+              <div class="flex-1 bg-surface-elevated p-6 rounded-xl w-full border border-white/5">
+                <h3 class="text-lg font-bold text-white mb-2">{{ t('howItWorks.steps.2.title') }}</h3>
+                <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.2.desc') }}</p>
+                <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
+                  <span class="text-primary">{{ t('howItWorks.steps.2.label') }}</span>
+                  <span class="text-green-400 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Running
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-surface border border-white/10 flex items-center justify-center text-lg font-bold text-gray-400">4</div>
+              <div class="flex-1 bg-surface-elevated p-6 rounded-xl w-full border border-white/5">
+                <h3 class="text-lg font-bold text-white mb-2">{{ t('howItWorks.steps.3.title') }}</h3>
+                <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.3.desc') }}</p>
+                <div class="bg-background rounded-lg p-3 font-mono text-xs text-primary border border-white/5">
+                  > kj-kit dashboard
+                </div>
+              </div>
             </div>
           </div>
         </div>
