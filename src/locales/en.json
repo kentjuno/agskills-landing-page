@@ -40,27 +40,16 @@
     "moreHint": "🔥 These are just <span class=\"text-primary font-medium\">5 of 130+</span> skills. Buy a license to unlock them all."
   },
   "howItWorks": {
-    "title": "Deploy in 4 Steps",
-    "steps": [
-      {
-        "title": "Install Core System",
-        "desc": "Open Terminal and install the KJ Studio CLI core via NPM."
-      },
-      {
-        "title": "Enter License Key",
-        "desc": "After installation, enter your GitHub Personal Access Token to authenticate access to the source code.",
-        "label": "Token:"
-      },
-      {
-        "title": "Start Antigravity Desktop",
-        "desc": "Mandatory: Open the Antigravity Desktop application to enable the local AI engine and grant file access.",
-        "label": "Status:"
-      },
-      {
-        "title": "Open Dashboard & Enjoy",
-        "desc": "Just type one command, and the entire command center opens up in your browser."
-      }
-    ]
+    "title": "AI-Powered Installation",
+    "subtitle": "Don't know how to code? No problem! Let your AI assistant automatically install the entire system for you with just 1 Copy-Paste.",
+    "aiBoxTitle": "100% Automated Setup",
+    "aiBoxDesc": "Open an empty folder in VS Code (or browser with Antigravity AI). Copy the prompt below into the AI chat box and press Enter:",
+    "tabs": {
+      "demo": "Demo Version",
+      "pro": "Pro Version"
+    },
+    "promptDemo": "Hi AI, I want to install the Demo version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit demo`\n\nRequirements:\n- If prompted for Yes/No, automatically select Yes.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!",
+    "promptPro": "Hi AI, I want to install the Full version of the Marketing Dashboard. Please open the Terminal and run these commands automatically:\n\n1. `npm install -g @kjantigravity/cli`\n2. `kj-kit init -k marketing`\n\nRequirements:\n- Guide me to enter the License Token when prompted.\n- If my machine lacks Node.js, stop and provide the direct download link.\n- After downloading, run the server startup command and give me the http://localhost link to access it immediately!"
   },
   "pricing": {
     "title": "Lifetime License",

@@ -11,7 +11,15 @@ const switchLanguage = () => {
 
 const showPricing = ref(false)
 const activeSkill = ref(0)
+const activeInstallTab = ref('demo')
+const copiedInstall = ref(false)
 const copied = ref(false)
+
+const copyInstallCommand = (cmd) => {
+  navigator.clipboard.writeText(cmd)
+  copiedInstall.value = true
+  setTimeout(() => { copiedInstall.value = false }, 2000)
+}
 
 const scrollToPricing = () => {
   document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })
@@ -378,58 +386,58 @@ const skills = [
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('howItWorks.title') }}</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">{{ t('howItWorks.subtitle') }}</p>
         </div>
         
-        <div class="space-y-12">
-          <!-- Step 1 -->
-          <div class="flex flex-col md:flex-row gap-6 items-center">
-            <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">1</div>
-            <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.0.title') }}</h3>
-              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.0.desc') }}</p>
-              <div class="bg-background rounded-lg p-3 font-mono text-xs text-green-400 border border-white/5">
-                > npm install -g @kjantigravity/cli<br/>
-                > kj-kit init -k marketing
-              </div>
+        <div class="glass-panel p-8 rounded-2xl border-primary/30 shadow-[0_0_30px_rgba(157,78,221,0.15)]">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="flex flex-col md:flex-row gap-6 items-center">
-            <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">2</div>
-            <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.1.title') }}</h3>
-              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.1.desc') }}</p>
-              <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
-                <span class="text-primary">{{ t('howItWorks.steps.1.label') }}</span> ghp_xxxxxxxxxxxxxxxxxxxx
-              </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">{{ t('howItWorks.aiBoxTitle') }}</h3>
+              <p class="text-sm text-gray-400 mt-1">{{ t('howItWorks.aiBoxDesc') }}</p>
             </div>
           </div>
 
-          <!-- Step 3: Antigravity Desktop -->
-          <div class="flex flex-col md:flex-row gap-6 items-center">
-            <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">3</div>
-            <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.2.title') }}</h3>
-              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.2.desc') }}</p>
-              <div class="bg-background rounded-lg p-3 font-mono text-xs text-gray-300 border border-white/5 flex items-center gap-2">
-                <span class="text-primary">{{ t('howItWorks.steps.2.label') }}</span>
-                <span class="text-green-400 flex items-center gap-1">
-                  <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Running
-                </span>
-              </div>
-            </div>
+          <!-- Tabs -->
+          <div class="flex bg-surface-elevated/50 p-1 rounded-xl mb-6">
+            <button 
+              @click="activeInstallTab = 'demo'"
+              class="flex-1 py-2 text-sm font-medium rounded-lg transition-all"
+              :class="activeInstallTab === 'demo' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white'"
+            >
+              {{ t('howItWorks.tabs.demo') }}
+            </button>
+            <button 
+              @click="activeInstallTab = 'pro'"
+              class="flex-1 py-2 text-sm font-medium rounded-lg transition-all"
+              :class="activeInstallTab === 'pro' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white'"
+            >
+              {{ t('howItWorks.tabs.pro') }}
+            </button>
           </div>
 
-          <!-- Step 4 -->
-          <div class="flex flex-col md:flex-row gap-6 items-center">
-            <div class="w-16 h-16 shrink-0 rounded-full bg-surface-elevated border border-primary/30 flex items-center justify-center text-2xl font-bold text-primary shadow-[0_0_15px_rgba(157,78,221,0.2)]">4</div>
-            <div class="flex-1 glass-panel p-6 rounded-xl w-full">
-              <h3 class="text-xl font-bold text-white mb-2">{{ t('howItWorks.steps.3.title') }}</h3>
-              <p class="text-gray-400 text-sm mb-4">{{ t('howItWorks.steps.3.desc') }}</p>
-              <div class="bg-background rounded-lg p-3 font-mono text-xs text-primary border border-white/5">
-                > kj-kit dashboard
-              </div>
+          <!-- Prompt Box -->
+          <div class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-xl blur-xl transition-opacity opacity-50 group-hover:opacity-100"></div>
+            <div class="relative bg-background border border-white/10 rounded-xl p-6 font-mono text-sm text-gray-300 whitespace-pre-wrap leading-relaxed shadow-inner">
+              {{ activeInstallTab === 'demo' ? t('howItWorks.promptDemo') : t('howItWorks.promptPro') }}
+              
+              <button 
+                @click="copyInstallCommand(activeInstallTab === 'demo' ? t('howItWorks.promptDemo') : t('howItWorks.promptPro'))"
+                class="absolute top-4 right-4 p-2 rounded-lg bg-surface hover:bg-primary/20 hover:text-primary transition-colors border border-white/5"
+                :class="copiedInstall ? 'text-green-400 border-green-500/30' : 'text-gray-400'"
+              >
+                <svg v-if="!copiedInstall" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <svg v-else class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
